@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.kursach.EditingController"
+            style="-fx-background-color: white; -fx-font-family: 'Montserrat';">
+
+    <!-- Левая панель с кнопками -->
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="15" style="-fx-background-color: #B0D9FF; -fx-padding: 20; -fx-background-radius: 10;">
+            <Button text="Сортировка" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Поиск" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Просмотр" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Диаграмма" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Назад" onAction="#handleBack" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+        </VBox>
+    </left>
+
+    <!-- Центральная область с таблицей -->
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 30;">
+            <!-- Заголовок -->
+            <Text text="Просмотр данных" style="-fx-font-size: 22px; -fx-text-fill: #404AA1;"/>
+
+            <!-- Таблица данных -->
+            <TableView fx:id="dataTable" prefWidth="600" prefHeight="300">
+                <!-- Столбцы таблицы -->
+                <columns>
+                    <TableColumn text="ID" fx:id="ID" prefWidth="100"/>
+                    <TableColumn text="Наименование" fx:id="nameColumn" prefWidth="200"/>
+                    <TableColumn text="Производитель" fx:id="manufacturerColumn" prefWidth="100"/>
+                    <TableColumn text="Стоимость" fx:id="priceColumn" prefWidth="100"/>
+                    <TableColumn text="Количество" fx:id="quantityColumn" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>
+
+

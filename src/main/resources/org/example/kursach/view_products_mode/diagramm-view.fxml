@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            style="-fx-background-color: white; -fx-font-family: 'Montserrat';">
+
+    <!-- Левая панель с кнопками -->
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="15" style="-fx-background-color: #B0D9FF; -fx-padding: 20; -fx-background-radius: 10;">
+            <Button text="Сортировка" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Поиск" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Просмотр" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Диаграмма" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Назад" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+        </VBox>
+    </left>
+
+    <!-- Центральная область с полем выбора параметра и диаграммой -->
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 30;">
+            <!-- Заголовок -->
+            <Text text="Диаграмма по параметрам" style="-fx-font-size: 22px; -fx-text-fill: #404AA1;"/>
+
+
+            <!-- Диаграмма -->
+            <BarChart fx:id="chart" prefWidth="500" prefHeight="300">
+                <xAxis>
+                    <CategoryAxis fx:id="xAxis" label="Наименование"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis fx:id="yAxis" label="Количество"/>
+                </yAxis>
+            </BarChart>
+        </VBox>
+    </center>
+
+</BorderPane>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.kursach.EditingController"
+            style="-fx-background-color: white; -fx-font-family: 'Montserrat';">
+
+    <!-- Левая панель с кнопками -->
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="15" style="-fx-background-color: #B0D9FF; -fx-padding: 20; -fx-background-radius: 10;">
+            <Button text="Добавление" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Редактирование" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Удаление" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Просмотр" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+            <Button text="Назад" onAction="#handleBack" style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-text-fill: #404AA1; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+        </VBox>
+    </left>
+
+    <!-- Центральная область с текстовыми полями -->
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 30;">
+            <Label text="Режим редактирования" style="-fx-font-size: 22px; -fx-text-fill: #404AA1;"/>
+            <TextField fx:id="idField" promptText="ID изменяемого пользователя"
+                       style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 5; -fx-pref-width: 200; -fx-pref-height: 30;"/>
+            <TextField fx:id="nameField" promptText="Новый логин"
+                       style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 5; -fx-pref-width: 200; -fx-pref-height: 30;"/>
+            <TextField fx:id="passwordField" promptText="Новый пароль"
+                       style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 5; -fx-pref-width: 200; -fx-pref-height: 30;"/>
+            <TextField fx:id="roleField" promptText="Новая роль"
+                       style="-fx-background-color: #FFFFFF; -fx-border-color: #404AA1; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 5; -fx-pref-width: 200; -fx-pref-height: 30;"/>
+
+            <Button text="Изменить"
+                    style="-fx-background-color: #B0D9FF; -fx-text-fill: #FFFFFF; -fx-border-radius: 20; -fx-background-radius: 20; -fx-pref-width: 150; -fx-pref-height: 40;"/>
+        </VBox>
+    </center>
+</BorderPane>

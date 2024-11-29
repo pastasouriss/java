@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.kursach.ProductsController"
+            style="-fx-background-color: white; -fx-font-family: 'Montserrat';">
+
+    <!-- Верхняя панель -->
+    <top>
+        <HBox spacing="30" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-background-color: #B0D9FF;">
+            <Button text="На главную"
+                    style="-fx-background-color: #B0D9FF; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"
+                    onAction="#handleReturnToMain"/>
+            <!-- Регион для того, чтобы иконка настроек была в правом углу -->
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <!-- Иконка настроек в правом верхнем углу -->
+            <ImageView fx:id="settingsIcon" fitWidth="30" fitHeight="30"
+                       style="-fx-cursor: hand; -fx-margin-left: auto;"
+                       onMouseClicked="#handleSettingsClick"/>
+        </HBox>
+    </top>
+
+    <!-- Центральная область -->
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+            <!-- Картинка c шестеренками -->
+            <ImageView fitWidth="250" fitHeight="250" preserveRatio="true" style="-fx-opacity: 0.8;">
+                <Image url="@adm_module.png"/>
+            </ImageView>
+            <!-- Кнопки для режимов -->
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Режим редактирования"
+                        style="-fx-font-size: 16px; -fx-background-color: #B0D9FF;  -fx-text-fill: white;
+                       -fx-padding: 8px 60px; -fx-border-radius: 10px; -fx-background-radius: 10px;"
+                        onAction="#handleEditMode"/>
+                <Button text="Режим просмотра"
+                        style="-fx-font-size: 16px; -fx-background-color: #B0D9FF;  -fx-text-fill: white;
+                       -fx-padding: 8px 60px; -fx-border-radius: 10px; -fx-background-radius: 10px;"
+                        onAction="#handleViewMode"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- Нижняя панель -->
+
+</BorderPane>

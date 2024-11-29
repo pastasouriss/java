@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.kursach.AdminController"
+            style="-fx-background-color: white; -fx-font-family: 'Montserrat';">
+
+    <!-- Верхняя панель -->
+    <top>
+        <HBox spacing="30" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-background-color: #B0D9FF;">
+            <!-- Кнопка для работы с пользователями -->
+            <Button text="Работа с пользователями"
+                    style="-fx-font-size: 14px; -fx-background-color: transparent; -fx-text-fill: #404AA1; -fx-font-weight: bold; -fx-cursor: hand;"
+                    onAction="#handleUsersButton"/>
+            <!-- Кнопка для работы с продукцией -->
+            <Button text="Работа с продукцией"
+                    style="-fx-font-size: 14px; -fx-background-color: transparent; -fx-text-fill: #404AA1; -fx-font-weight: bold; -fx-cursor: hand;"
+                    onAction="#handleProductsButton"/>
+
+            <!-- Регион для выравнивания кнопки настроек вправо -->
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <!-- Кнопка настроек -->
+            <Button text="Выход"
+                    style="-fx-font-size: 14px; -fx-background-color: transparent; -fx-text-fill: #404AA1; -fx-cursor: hand;"
+                    />
+        </HBox>
+    </top>
+
+    <!-- Центральная область -->
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+            <!-- Картинка admin.png -->
+            <ImageView fitWidth="250" fitHeight="250" preserveRatio="true" style="-fx-opacity: 0.8;">
+                <Image url="@admin.png"/>
+            </ImageView>
+            <!-- Текст -->
+            <Text fx:id="welcomeText" text="Добро пожаловать!"
+                  style="-fx-font-size: 24px; -fx-fill: #404AA1; -fx-font-weight: normal; -fx-text-alignment: center;"/>
+        </VBox>
+    </center>
+</BorderPane>
